@@ -241,7 +241,103 @@ gene regulatory network we get weight matrix giving the output of interactions
 between two nodes. Now using these output weight matrix value we can cal-
 culate the value of gene expression required for a particular change in a cell.[4]
 </p>
+<h3>5. Gene expression networks from microarray dataset</h3>
+<p>
+  There two types of dierent networks coupled with the gene expression. One
+is gene expression networks. To derive these gene expression networks, we use
+microarray data sets. On a genome scale, we take measures of time series of
+mRNA levels. The other type of network is the transcription factor networks.
+These networks are derived from a method which identies all the DNA binding
+sites for all the transcription factors.
+One of the issues in bioinformatics is to recognize the relation between all the
+dierent parts of a system and deduce what impact these parts have on each
+other. We need complete picture of gene regulatory network to comprehend the
+system of gene expression.
+These networks gives various characteristics of gene regulation and deliver dif-
+ferent insights. The gene expression network can be gathered from analysis of
+data based on time series of gene expression. All the resulting networks repre
+sents features that are global to biological schemes.
+Gene expression arrays which is a high output method, emphasis on genome
+proles of a single gene from a population. We can say this represents a `picture
+in time' of a diverse population. In the same species also genetic variations
+aects expression prole of the gene. Hence two organisms are not the same.
+Also, every organism contains a history of its own. This history can direct to an
+extensive range of states of the system with various dierent expression proles.
+We need to monitor the expression prole of the gene time to time to dieren-
+tiate between consequences of the history and the generic variation. Analysing
+and deciding the time series expression data has a lot of advantages. For ex-
+ample, the chemical kinetics gives more autonomous data than the chemical
+thermodynamics. In the same way, the time series data are more agreeable to
+network modeling than expression data from a population. With the time series
+data set, initially the system is made in a given physiological state and as it
+changes the state, we measure the changes in the gene expression levels.
+To analyze the expression time series we use random forest regression model.
+</p>
+<h3>6. Random Forest Regressor Algorithm</h3>
+<p>
+  Random forest Algorithm works as large collection of decorrelated trees. This
+algorithm makes use of lots of decision trees to make a classication. These de-
+cision trees are developed on the basis of random selection of data and random
+selection of variables.[6]
+How do we create random trees? We create lots of random subsets from the
+sample set of original yeast micro dataset array. We create decision trees from
+these randomly chosen subsets.
+For making decision trees, we enter training sets (X,y) where X is the 2D array
+of all the inputs genes and their feature values and y is the array of features
+of the corresponding target genes. [2] We plot the corresponding points of the
+array on X-Axis and Y-Axis. We divide the X-Axis into several partitions and
+each partition point forms decision node. We classify the dataset according to
+the decision tree and for each partition or class we calculate the average mean
+squared error based on the y values. Using mean squared error we nd the
+weight from the decision tree. The weights obtained from several decision trees
+are compared and the minimum value is chosen as the nal weight and entered
+into the featureimportancesmatrix:
+</p>
+<h3></h3>
+<p>
+  These gene networks help in solving a numerous dierent biological and biomed-
+ical problems. They are discussed below[1]:
 
+Causal map of molecular interactions:
+The most recent use found of gene regulatory networks is to act as a blueprint
+of the molecular interactions. By this, a gene network can be used to derive
+an ideal biological hypotheses about molecular interactions, such as for the
+transcriptional regulation of genes experimented in wet labs. In such a condi-
+tions GRNs represent causal bio-chemical interactions since the predicted links
+are to correspond to actual physical binding events between the molecules. A
+signicant side of this use is that the GRNs represent statistically signicant
+predictions of potential molecular interactions which are obtained from very
+large-scale data. Given a very large- scale number of potential molecular inter-
+actions between 20,000 genes in Human beings and 6000 gene in organisms like
+yeasts, the GRNs are of huge help in pruning these numbers down to potential
+interactions for which statistical support is available. This, in turn enables more
+eective and precise experiments.
+
+Networks as biomarkers:
+Recently, it has been debated that sub-networks can also be utilized as biomark
+ers, for example for diagnostic and predictive and prognostic purposes. This
+will be possible for any complex disorder such as cancer, as the hallmarks of
+cancer genes are represented by pathways instead of individual genes. The
+aspects of cancer pathway is that their constituting genes are continuously ac-
+tively interacting with one another. Due to this network-based biomarkers can
+be represented as statistical measures that will consider the molecular interac-
+tion structure between individual genes. In contrary to biomarkers which are
+based on individual genes, they neglect these completely Comparative network
+analysis When multiple regulatory networks of dierent physiological and other
+disease conditions will become available, we would be able to statistically com-
+pare these networks. This will help us learn and understand about molecular
+interaction changes across dierent physiological and other disease conditions
+and enhance our biomedical understanding of such phenotypes. However, for
+this approach to work it would be of necessity to create databases similar to the
+protein structure databases, this will provide free access to the gene regulatory
+networks from all dierent physiological and various diseased conditions.
+
+Network medicine and drug design:
+For structuring an ecient network medicine, it will be crucial to mix dierent
+types of gene networks with one another other as each network type contains in-
+formation regarding dierent molecular aspects. Hence for a better and ecient
+design of drugs the use of gene networks is compulsory.
+</p>
 
                     </div>
                 </div>
